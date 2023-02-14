@@ -1,0 +1,40 @@
+<config-template xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+    <device>
+      <name>{//links/device_a}</name>
+      <config>
+        <interface xmlns="http://tail-f.com/ned/cisco-ios-xr">
+          <GigabitEthernet>
+            <id>{GigabitEthernet_a}</id>
+            <description>{//links/name}</description>
+            <ipv4>
+              <address>
+                <ip>{ipv4-address_a}</ip>
+                <mask>{mask_a}</mask>
+              </address>
+            </ipv4>
+          </GigabitEthernet>
+        </interface>
+
+      </config>
+    </device>
+    <device>
+      <name>{//links/device_b}</name>
+      <config>
+        <interface xmlns="http://tail-f.com/ned/cisco-ios-xr">
+          <GigabitEthernet>
+            <id>{GigabitEthernet_b}</id>
+            <description>{//links/name}</description>
+            <ipv4>
+              <address>
+                <ip>{ipv4-address_b}</ip>
+                <mask>{mask_b}</mask>
+              </address>
+            </ipv4>
+          </GigabitEthernet>
+        </interface>
+
+      </config>
+    </device>
+  </devices>
+</config-template>
